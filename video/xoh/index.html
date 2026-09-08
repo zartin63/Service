@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>National Theatre | Welcome</title>
+    <style>
+        /* Google Fonts Import */
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Roboto:wght@300;400;700&display=swap');
+
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: #000;
+            color: #fff;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 26px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #e50914; /* Theatre Red */
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 80vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('https://images.unsplash.com/photo-1507676184212-d0330a15233c?auto=format&fit=crop&w=1920&q=80') center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            margin-bottom: 20px;
+            max-width: 800px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            max-width: 600px;
+            font-weight: 300;
+        }
+
+        .btn {
+            padding: 15px 40px;
+            background-color: #e50914;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            text-transform: uppercase;
+            border-radius: 3px;
+            transition: background 0.3s ease, transform 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #b20710;
+            transform: scale(1.05);
+        }
+
+        /* What's On Section */
+        .shows {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .shows-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .shows-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #000;
+        }
+
+        .shows-header p {
+            color: #666;
+            margin-top: 10px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+        }
+
+        /* Show Cards */
+        .card {
+            background: #fff;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 25px;
+        }
+
+        .card-content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            margin-bottom: 10px;
+            color: #000;
+        }
+
+        .card-content p {
+            color: #555;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+
+        .card-content .book-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            border: 2px solid #000;
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .card-content .book-btn:hover {
+            background-color: #000;
+            color: #fff;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #000;
+            color: #aaa;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav ul {
+                display: none; /* In a real project, replace with a hamburger menu */
+            }
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <a href="#" class="logo">National Theatre</a>
+        <nav>
+            <ul>
+                <li><a href="#">What's On</a></li>
+                <li><a href="#">Your Visit</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Support Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>World-Class Theatre for Everyone</h1>
+        <p>Experience unforgettable stories, groundbreaking performances, and the magic of live theatre in the heart of London.</p>
+        <a href="#shows" class="btn">See What's On</a>
+    </section>
+
+    <!-- Shows Section -->
+    <section id="shows" class="shows">
+        <div class="shows-header">
+            <h2>Currently Playing</h2>
+            <p>Discover our latest productions on stage now.</p>
+        </div>
+        
+        <div class="grid">
+            <!-- Card 1 -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1514306191717-452ec28c7814?auto=format&fit=crop&w=600&q=80" alt="Theatre Play 1">
+                <div class="card-content">
+                    <h3>Hamlet</h3>
+                    <p>Shakespeare’s great tragedy of a young man torn between duty and morality. A bold new production.</p>
+                    <a href="#" class="book-btn">Book Tickets</a>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1460723237483-7a6dc9d0b212?auto=format&fit=crop&w=600&q=80" alt="Theatre Play 2">
+                <div class="card-content">
+                    <h3>The Motive and the Cue</h3>
+                    <p>A fierce and funny new play exploring the clash between a legendary director and his star actor.</p>
+                    <a href="#" class="book-btn">Book Tickets</a>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1507676184212-d0330a15233c?auto=format&fit=crop&w=600&q=80" alt="Theatre Play 3">
+                <div class="card-content">
+                    <h3>Frankenstein</h3>
+                    <p>Childlike in his innocence but grotesque in form, Frankenstein’s bewildered creature is cast out into a hostile universe.</p>
+                    <a href="#" class="book-btn">Book Tickets</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2026 National Theatre. All rights reserved.</p>
+        <p>Upper Ground, London SE1 9PX</p>
+    </footer>
+
+</body>
+</html>
